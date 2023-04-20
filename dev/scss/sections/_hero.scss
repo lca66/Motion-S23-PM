@@ -1,0 +1,79 @@
+#hero{
+    height: 90vh;
+    width:100%;
+    
+
+    @include xl{
+        display:grid;
+        grid-template-areas: ". hero .";
+        grid-template-columns: auto 1800px auto;
+
+    }
+
+    >div{
+        overflow:scroll;
+        height:100%;
+
+        @include xl{
+            grid-area: hero;
+        }
+    }
+
+    button {
+        font-size: (16);
+        font-weight: 600;
+        text-decoration: none;
+
+    }
+    article{
+        display:flex;
+        justify-content: left;
+        padding-left: 30px;
+        padding-top: 50px;
+        align-items: center;
+        height: 140%;
+        width: 100%;
+        background-image: url('../img/Hero.jpg');
+        background-position: center;
+        background-size: cover;
+
+        #hero-content{
+            color:var(--white);;
+            text-align: left;
+        
+            h1{
+                font-size: rem-calc(64);
+                font-weight: 600;
+                line-height: 117px;
+                text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+                margin: 0;
+
+                @include md{
+                    font-size: rem-cal(90);
+                }
+                @include lg{
+                    font-size: rem-cal(100);
+                }
+            }
+
+            h2{
+                font-size: rem-calc(32);
+                font-weight: 300;
+                line-height: 40px;
+                text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+                margin-top: -25px;
+                padding-bottom: 25px;
+
+                @include md{
+                    font-size: rem-cal(40);
+                    margin-top: -20px;
+                }
+                @include lg{
+                    font-size: rem-cal(40);
+                    margin-top: -15px;
+                }
+            }
+
+        }
+    }
+}

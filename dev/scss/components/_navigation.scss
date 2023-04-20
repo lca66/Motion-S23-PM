@@ -1,0 +1,36 @@
+/* =============
+    Navigation
+============= */
+
+nav{
+    
+    height:100%;
+    
+    ul{
+        
+        height:100%;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding-right:30px;
+
+        li{
+            margin-left: 4vw;
+
+            a:link, a:visited{
+                text-decoration: none;
+                color:var(--white);
+                transition: 0.25s;
+                font-size: rem-calc(24);
+                font-weight: 300;
+
+                &:hover, &:active{
+                    color: #979797;
+                }
+
+            }
+        }
+    }
+}
